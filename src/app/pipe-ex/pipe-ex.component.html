@@ -1,0 +1,35 @@
+<p>{{name}}</p>
+<p>Upper Case: {{name | uppercase}} </p>
+<p>Lower case: {{name | lowercase}}</p>
+<div>
+  <p>
+    {{accountBalance | currency:'USD'}}
+  </p>
+  <!--output 'CA$0.26'-->
+  <p>{{ accountBalance | currency: 'CAD' }}</p>
+</div>
+
+{{ dateObj | date }} <br>
+{{ dateObj | date:'medium' }}  <br>
+{{ dateObj | date:'shortTime' }}<br>
+{{ dateObj | date:'mm:ss' }} <br>
+{{ dateObj | date:"MMM dd, yyyy 'at' hh:mm a" }}<br>
+
+<div>
+  <p>
+    No specified formatting:
+    {{ pi | number }}
+  </p>
+
+  <p>
+    With digitsInfo parameter specified:
+    {{ pi | number: '4.1-5' }}
+  </p>
+
+  <p>
+    With digitsInfo parameter specified:
+    {{ pi1 | number: '4.2-5' }}
+  </p>
+
+
+</div>
