@@ -1,6 +1,15 @@
 <p>{{name}}</p>
 <p>Upper Case: {{name | uppercase}} </p>
 <p>Lower case: {{name | lowercase}}</p>
+<p>Lower case: {{name | lower}}</p>
+
+<p>Age1: {{HopeTutorsAge | validateAge}}</p>
+<p>Age2: {{TrainerAge | validateAge}}</p>
+
+
+<p ngClass="{{HopeTutorsAge | validateAge}}">Age1: {{HopeTutorsAge | validateAge}}</p>
+<p ngClass="{{TrainerAge | validateAge}}">Age2: {{TrainerAge | validateAge}}</p>
+
 <div>
   <p>
     {{accountBalance | currency:'USD'}}

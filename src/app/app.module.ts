@@ -7,14 +7,22 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PipeExComponent } from './pipe-ex/pipe-ex.component';
 import { AppRoutingModule } from './app.routing.module';
+import { LowerPipe } from './shared/lower.pipe';
+import { ValidateAgePipe } from './shared/validate-age.pipe';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, PipeExComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    PipeExComponent,
+    LowerPipe,
+    ValidateAgePipe
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
