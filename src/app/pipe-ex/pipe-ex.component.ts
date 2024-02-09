@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ComponentInteractService } from '../comp-communicate/component-interact.service';
 
 @Component({
   selector: 'HopeTutors-pipe-ex',
@@ -13,6 +14,11 @@ export class PipeExComponent {
   pi1: number = 3;
   HopeTutorsAge: number = 8;
   TrainerAge: number = 29;
+  ReceivedData: string = '';
+
+  constructor(private compoInteractSerice: ComponentInteractService) {
+    this.ReceivedData = this.compoInteractSerice.message;
+  }
 
   //2024-12-31T18:30:00.000Z
 }

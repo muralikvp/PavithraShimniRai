@@ -9,6 +9,11 @@ import { PipeExComponent } from './pipe-ex/pipe-ex.component';
 import { AppRoutingModule } from './app.routing.module';
 import { LowerPipe } from './shared/lower.pipe';
 import { ValidateAgePipe } from './shared/validate-age.pipe';
+import { TopLayerComponent } from './ContentProjecton/top-layer/top-layer.component';
+import { BottomLayerComponent } from './ContentProjecton/bottom-layer/bottom-layer.component';
+import { FirstComponent } from './comp-communicate/first/first.component';
+import { SecondComponent } from './comp-communicate/second/second.component';
+import { ComponentInteractComponent } from './comp-communicate/component-interact/component-interact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { ValidateAgePipe } from './shared/validate-age.pipe';
     LoginComponent,
     PipeExComponent,
     LowerPipe,
-    ValidateAgePipe
+    ValidateAgePipe,
+    TopLayerComponent,
+    BottomLayerComponent,
+    FirstComponent,
+    SecondComponent,
+    ComponentInteractComponent
   ],
   imports: [
     BrowserModule,
