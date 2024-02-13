@@ -1,0 +1,12 @@
+<p>parent works!</p>
+<!-- <p>Sending data from Parent to Child </p> -->
+<!-- <HopeTutors-child [customColor]="colorInfo" ></HopeTutors-child> -->
+
+<p>Receiving data from Child to Parent </p>
+<HopeTutors-child (newItemEvent)="addItem($event)"></HopeTutors-child>
+
+<div style="background-color: beige;">
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+</div>

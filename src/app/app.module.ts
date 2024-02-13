@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PipeExComponent } from './pipe-ex/pipe-ex.component';
 import { AppRoutingModule } from './app.routing.module';
 import { LowerPipe } from './shared/lower.pipe';
@@ -14,6 +14,9 @@ import { BottomLayerComponent } from './ContentProjecton/bottom-layer/bottom-lay
 import { FirstComponent } from './comp-communicate/first/first.component';
 import { SecondComponent } from './comp-communicate/second/second.component';
 import { ComponentInteractComponent } from './comp-communicate/component-interact/component-interact.component';
+import { ParentComponent } from './comp-communicate/parent/parent.component';
+import { ChildComponent } from './comp-communicate/child/child.component';
+import { TokenInterceptor } from './shared/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { ComponentInteractComponent } from './comp-communicate/component-interac
     BottomLayerComponent,
     FirstComponent,
     SecondComponent,
-    ComponentInteractComponent
+    ComponentInteractComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,13 @@ import { ComponentInteractComponent } from './comp-communicate/component-interac
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
