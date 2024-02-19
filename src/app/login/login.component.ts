@@ -26,6 +26,7 @@ export class LoginComponent {
       this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
         console.log(response);
       });
+
       console.log("Inside Login function");
 
     }
