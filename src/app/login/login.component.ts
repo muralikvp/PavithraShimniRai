@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { LoginDetails } from '../login-details';
 
 @Component({
   selector: 'HopeTutors-login',
@@ -23,7 +24,12 @@ export class LoginComponent {
   public ProceedLogin(): void {
     if (this.Login.valid) {
 
-      this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
+      let loginOb: LoginDetails = {
+        username: this.Login.value.username!,
+        password: this.Login.value.password!
+      };
+
+      this.auth.CheckLogin(loginOb).subscribe((response: any) => {
         console.log(response);
       });
 

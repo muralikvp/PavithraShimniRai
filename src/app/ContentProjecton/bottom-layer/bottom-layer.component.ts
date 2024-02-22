@@ -25,9 +25,9 @@ export class BottomLayerComponent {
 
   public ProceedLogin(): void {
     if (this.Login.valid) {
-      this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
-        console.log(response);
-      });
+      // this.auth.CheckLogin(this.Login.value).subscribe((response: any) => {
+      //   console.log(response);
+      // });
       console.log('Inside Login function');
     } else {
       console.log('Login Failed');
