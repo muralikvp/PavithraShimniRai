@@ -18,6 +18,7 @@ import { ParentComponent } from './comp-communicate/parent/parent.component';
 import { ChildComponent } from './comp-communicate/child/child.component';
 import { TokenInterceptor } from './shared/token.interceptor';
 import { AddnewComponent } from './addnew/addnew.component';
+import { ListingComponent } from './listing/listing.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AddnewComponent } from './addnew/addnew.component';
     ComponentInteractComponent,
     ParentComponent,
     ChildComponent,
-    AddnewComponent
+    AddnewComponent,
+    ListingComponent
   ],
   imports: [
     BrowserModule,

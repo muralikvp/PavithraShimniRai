@@ -7,6 +7,7 @@ import { TopLayerComponent } from "./ContentProjecton/top-layer/top-layer.compon
 import { ComponentInteractComponent } from "./comp-communicate/component-interact/component-interact.component";
 import { ParentComponent } from "./comp-communicate/parent/parent.component";
 import { AddnewComponent } from "./addnew/addnew.component";
+import { ListingComponent } from "./listing/listing.component";
 
 
 const routes: Routes = [
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'ComponentCommunication', component: ComponentInteractComponent },
   { path: 'ParentToChild', component: ParentComponent },
   { path: 'AddCustomer', component: AddnewComponent },
+  { path: 'Edit/:id', component: AddnewComponent },
+  { path: 'CustomerList', component: ListingComponent },
 
 ];
 
