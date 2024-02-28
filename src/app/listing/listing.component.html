@@ -1,13 +1,13 @@
 <div class="card-box">
   <div class="row">
     <div class="col-sm-4">
-      <a routerLink="create" id="addbtn" class="btn btn-sucess btn-rounded">Add New</a>
+      <button routerLink="/AddCustomer" id="addbtn" class="btn btn-sucess btn-rounded">Add New</button>
     </div>
   </div>
   <div class="row">
     <div class="table-responsive">
-      <table>
-        <thead>
+      <table class="table table-bordered table-hover table-striped table-dark table-sm">
+        <thead class="thead-light">
           <tr>
             <th>Code</th>
             <th>Name</th>
@@ -24,7 +24,7 @@
             <td>{{item.phone}} </td>
             <td>
               <button routerLink="/Edit/{{item.id}}" class="btn btn-primary">Edit</button> |
-              <!-- <button (click)="delete(item.id)" class="btn btn-danger">Delete</button> -->
+              <button (click)="delete(item.id)" class="btn btn-danger">Delete</button>
             </td>
           </tr>
         </tbody>

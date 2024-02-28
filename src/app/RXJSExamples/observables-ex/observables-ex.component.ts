@@ -11,6 +11,9 @@ import { observable } from 'rxjs/internal/symbol/observable';
 })
 export class ObservablesExComponent {
 
+  constructor() {
+
+  }
 
 
 }

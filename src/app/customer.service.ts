@@ -10,7 +10,7 @@ export class CustomerService {
   apiurl = 'https://dummyjson.com/users';
   constructor(private http: HttpClient) { }
 
-  SaveCustomer(customerData: CustomerInfo) {
+  SaveCustomer(customerData: CustomerInfo):Observable<any> {
     let data = this.http.post(this.apiurl + '/add', customerData);
     return data;
   }
@@ -21,6 +21,10 @@ export class CustomerService {
 
   LoadCustomer(): Observable<any> {
     return this.http.get(this.apiurl);
+  }
+
+  RemoveCustomer(id: any) {
+    return this.http.delete(this.apiurl + '/' + id);
   }
 
 

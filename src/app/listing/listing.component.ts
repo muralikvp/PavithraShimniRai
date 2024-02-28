@@ -20,5 +20,15 @@ export class ListingComponent {
     });
   }
 
+  public delete(id: number) {
+    if (confirm('Are you sure to delete?')) {
+      this.service.RemoveCustomer(id).subscribe((result) => {
+        if (result != null) {
+          this.LoadCustomerData();
+        }
+      })
+    }
+  }
+
 
 }

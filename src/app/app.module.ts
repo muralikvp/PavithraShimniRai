@@ -19,6 +19,9 @@ import { ChildComponent } from './comp-communicate/child/child.component';
 import { TokenInterceptor } from './shared/token.interceptor';
 import { AddnewComponent } from './addnew/addnew.component';
 import { ListingComponent } from './listing/listing.component';
+import { SenderComponent } from './RXJSExamples/sender/sender.component';
+import { Receiver1Component } from './RXJSExamples/receiver1/receiver1.component';
+import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ListingComponent } from './listing/listing.component';
     ParentComponent,
     ChildComponent,
     AddnewComponent,
-    ListingComponent
+    ListingComponent,
+    SenderComponent,
+    Receiver1Component,
+    Receiver2Component
   ],
   imports: [
     BrowserModule,

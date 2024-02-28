@@ -8,6 +8,8 @@ import { ComponentInteractComponent } from "./comp-communicate/component-interac
 import { ParentComponent } from "./comp-communicate/parent/parent.component";
 import { AddnewComponent } from "./addnew/addnew.component";
 import { ListingComponent } from "./listing/listing.component";
+import { ObservablesExComponent } from "./RXJSExamples/observables-ex/observables-ex.component";
+import { SenderComponent } from "./RXJSExamples/sender/sender.component";
 
 
 const routes: Routes = [
@@ -21,7 +23,7 @@ const routes: Routes = [
   { path: 'AddCustomer', component: AddnewComponent },
   { path: 'Edit/:id', component: AddnewComponent },
   { path: 'CustomerList', component: ListingComponent },
-
+  { path: 'Observables', component: SenderComponent },
 ];
 
 
