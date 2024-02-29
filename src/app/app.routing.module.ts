@@ -10,6 +10,7 @@ import { AddnewComponent } from "./addnew/addnew.component";
 import { ListingComponent } from "./listing/listing.component";
 import { ObservablesExComponent } from "./RXJSExamples/observables-ex/observables-ex.component";
 import { SenderComponent } from "./RXJSExamples/sender/sender.component";
+import { PrimeTestComponent } from "./WebWorker/prime-test/prime-test.component";
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'Edit/:id', component: AddnewComponent },
   { path: 'CustomerList', component: ListingComponent },
   { path: 'Observables', component: SenderComponent },
+  { path: 'WebWorker', component: PrimeTestComponent },
 ];
 
 

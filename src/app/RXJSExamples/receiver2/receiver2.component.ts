@@ -7,7 +7,10 @@ import { RxjsExService } from '../rxjs-ex.service';
   styleUrls: ['./receiver2.component.css']
 })
 export class Receiver2Component {
-receiveMessage: string = "";
+  receiveMessage: string = "";
+  RandomMessage: string = "";
+  SubjectMessage: string = "";
+
   constructor(private service: RxjsExService) {
     service.Sender$.subscribe({
       next: (v:any) => {
@@ -17,6 +20,17 @@ receiveMessage: string = "";
       complete: () => { this.receiveMessage = this.receiveMessage + " ******* Completed" },
     }
     );
+
+    service.randomOb$.subscribe((res: any) => {
+      this.RandomMessage = 'subscription b : ' + res;
+    });
+
+    this.service.Sub1$.subscribe(res => {
+      this.SubjectMessage = 'Subject b :' + res;
+    });
   }
+
+
+
 
 }

@@ -22,6 +22,7 @@ import { ListingComponent } from './listing/listing.component';
 import { SenderComponent } from './RXJSExamples/sender/sender.component';
 import { Receiver1Component } from './RXJSExamples/receiver1/receiver1.component';
 import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component';
+import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component
     ListingComponent,
     SenderComponent,
     Receiver1Component,
-    Receiver2Component
+    Receiver2Component,
+    PrimeTestComponent
   ],
   imports: [
     BrowserModule,
