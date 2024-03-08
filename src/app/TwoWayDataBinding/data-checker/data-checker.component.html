@@ -1,0 +1,12 @@
+<p>Current item name: {{currentItem}}</p>
+
+<p>Eligible to Vote: {{IsVote}}</p>
+<p>
+  <label for="example-ngModel">Name</label>
+  <input [(ngModel)]="currentItem" (ngModelChange)="setUppercaseName($event)" id="example-ngModel">
+</p>
+
+<p>
+  <label for="example-ngModel">Age</label>
+  <input [(ngModel)]="age" (ngModelChange)="checkAgeLimit($event)" id="example-ngModel1">
+</p>

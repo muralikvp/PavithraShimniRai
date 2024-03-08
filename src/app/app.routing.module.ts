@@ -11,6 +11,7 @@ import { ListingComponent } from "./listing/listing.component";
 import { ObservablesExComponent } from "./RXJSExamples/observables-ex/observables-ex.component";
 import { SenderComponent } from "./RXJSExamples/sender/sender.component";
 import { PrimeTestComponent } from "./WebWorker/prime-test/prime-test.component";
+import { DataCheckerComponent } from "./TwoWayDataBinding/data-checker/data-checker.component";
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'CustomerList', component: ListingComponent },
   { path: 'Observables', component: SenderComponent },
   { path: 'WebWorker', component: PrimeTestComponent },
+  { path: 'TwoWayDataBinding', component: DataCheckerComponent },
 ];
 
 

@@ -9,9 +9,17 @@ import { CustomerService } from '../customer.service';
 export class ListingComponent {
 
   public Customerdata: any;
+  id!: any;
+  count: number = 0;
 
   constructor(private service: CustomerService) {
+    console.log("Constructor");
+  }
+
+  ngOnInit(): void {
+    console.log("ngOnInit");
     this.LoadCustomerData();
+    this.id = setInterval(() => this.count++, 1000);
   }
 
   private LoadCustomerData() {
@@ -28,6 +36,11 @@ export class ListingComponent {
         }
       })
     }
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.id);
+    console.log("ngOnDestroy");
   }
 
 
