@@ -24,6 +24,7 @@ import { Receiver1Component } from './RXJSExamples/receiver1/receiver1.component
 import { Receiver2Component } from './RXJSExamples/receiver2/receiver2.component';
 import { PrimeTestComponent } from './WebWorker/prime-test/prime-test.component';
 import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-checker.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { DataCheckerComponent } from './TwoWayDataBinding/data-checker/data-chec
     Receiver1Component,
     Receiver2Component,
     PrimeTestComponent,
-    DataCheckerComponent
+    DataCheckerComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,

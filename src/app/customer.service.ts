@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CustomerInfo } from './customer-info';
 import { Observable } from 'rxjs';
@@ -27,5 +27,13 @@ export class CustomerService {
     return this.http.delete(this.apiurl + '/' + id);
   }
 
+  LoadCustomerPaginatedData(page: number, itemsPerPage: number): Observable<any> {
+
+    const params = new HttpParams()
+      .set('skip', ((page - 1) * itemsPerPage).toString())
+      .set('limit', itemsPerPage.toString());
+
+    return this.http.get(this.apiurl, { params });
+  }
 
 }
