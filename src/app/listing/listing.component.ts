@@ -15,6 +15,8 @@ export class ListingComponent {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   totalItems!: number;
+  totalPages!: number;
+  selectedDeviceObj: any;
 
 
 
@@ -55,15 +57,21 @@ export class ListingComponent {
     this.service.LoadCustomerPaginatedData(this.currentPage,this.itemsPerPage).subscribe((data) => {
       if (search == "" || search == null) {
         this.Customerdata = data.users;
-        this.totalItems = data.totalItems;
+        this.totalItems = data.total;
       }
       else {
         this.Customerdata = this.Customerdata.filter((res: { firstName: string; }) => {
           return res.firstName.toLocaleLowerCase().match(search.toLocaleLowerCase());
         });
         this.totalItems = this.Customerdata.length;
+
+      }
+      if (this.totalItems > 0) {
+        this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
       }
     });
+
+
 
   }
 
@@ -94,12 +102,16 @@ export class ListingComponent {
     }
   }
 
-  goToPage(page: string): void {
+  goToPage(page: any): void {
     const pageNumber = parseInt(page, 10);
     if (pageNumber && pageNumber >= 1 && pageNumber <= this.totalPages && pageNumber !== this.currentPage) {
       this.currentPage = pageNumber;
       this.loadIntialData();
     }
+  }
+
+  get pageNumbers(): number[] {
+    return Array.from({ length: this.totalPages }, (_, index) => index + 1);
   }
 
 }
